@@ -1,28 +1,11 @@
 "use client"
 
 import * as React from "react"
-import {
-    BookOpen,
-    Bot,
-    Command,
-    Frame,
-    LifeBuoy,
-    Map,
-    PieChart,
-    Send,
-    Settings2,
-    SquareTerminal,
-} from "lucide-react"
 
 
 import {
     Sidebar,
-    SidebarContent,
-    SidebarFooter,
-    SidebarHeader,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
+    SidebarContent
 } from "@/components/ui/sidebar"
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'

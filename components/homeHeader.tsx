@@ -11,12 +11,12 @@ const HomeHeader = () => {
 
         <div className=" flex  gap-4 items-center">
           <h1 className=" flex   items-center   gap-x-2.5">
-            <span className=" font-bold text-2xl md:text-4xl public-sans" >
+            <span className=" font-bold text-3xl md:text-4xl " >
               Wallet Ledger
             </span> <Image src={claretDown} alt="icon" /></h1>
-          <div className=" bg-[#386776]/10 flex  max-h-7 rounded-2xl px-2 gap-2 items-center font-medium">
+          <div className=" bg-[#386776]/10 flex  max-h-7 rounded-2xl p-2 gap-2 items-center font-medium">
             <div className=" w-2 h-2 rounded-full bg-[#087A2E]"></div>
-            <h6>Active</h6>
+            <h6 className='text-xs sm:text-base'>Active</h6>
           </div>
         </div>
 
@@ -32,7 +32,7 @@ const HomeHeader = () => {
       </section>
       <div className=" flex flex-wrap items-center gap-2">
         <Image src={profilePictures} alt="" width={110} />
-        <span className=" text-[#15272D]/60 ">Ava, Liam, Noah <span className=" ml-1">+12 others</span></span>
+        <span className=" text-[#15272D]/60  text-xs sm:text-base">Ava, Liam, Noah <span className=" ml-1">+12 others</span></span>
 
       </div>
     </>

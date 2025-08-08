@@ -24,64 +24,64 @@ export function Header() {
 
     return (
         <header className="bg-background sticky top-0 py-5 z-50 flex w-full items-center">
-            <div className="flex h-(--header-height) w-full items-center justify-between gap-2  md:px-4">
+            <div className="flex h-(--header-height) w-full items-center justify-between gap-2  bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-lg md:px-4">
                 <div className=' flex items-center gap-5'>
-                <Button
-                    className="h-8 w-8"
-                    variant="ghost"
-                    size="icon"
-                    onClick={toggleSidebar}
-                >
-                    <Image
-                        aria-hidden
-                        src={menuIcon}
-                        alt="menu icon"
-                        width={18}
-                        height={12}
+                    <Button
+                        className="h-8 w-8"
+                        variant="ghost"
+                        size="icon"
+                        onClick={toggleSidebar}
+                    >
+                        <Image
+                            aria-hidden
+                            src={menuIcon}
+                            alt="menu icon"
+                            width={18}
+                            height={12}
 
-                    />
-                </Button>
-                <Link href={"/"}>
-                    <Image
-                        width={112}
-                        height={32}
-                        aria-hidden
-                        src={logo}
-                        alt="logo icon"
+                        />
+                    </Button>
+                    <Link href={"/"}>
+                        <Image
+                            width={112}
+                            height={32}
+                            aria-hidden
+                            src={logo}
+                            alt="logo icon"
 
-                    />
-                </Link>
+                        />
+                    </Link>
 
                 </div>
 
                 <div className=' flex gap-2 md:gap-5 items-center'>
 
-                <Dialog>
-                    <DialogTrigger>        <Search className="size-4 " />
-                    </DialogTrigger>
-                    <DialogContent >
-                        <SearchForm className="" />
-                        <DialogTitle />
-                    </DialogContent>
-                </Dialog>
+                    <Dialog>
+                        <DialogTrigger>        <Search className="size-4 cursor-pointer " />
+                        </DialogTrigger>
+                        <DialogContent >
+                            <SearchForm className="" />
+                            <DialogTitle />
+                        </DialogContent>
+                    </Dialog>
 
 
-                <Image
-                    aria-hidden
-                    src={grid}
-                    alt="icon"
-                    className=" mx-5"
-
-                />
-                <Link href={"/"}>
                     <Image
                         aria-hidden
-                        src={avatar}
+                        src={grid}
                         alt="icon"
-                        width={40}
+                        className=" mx-5 hidden sm:block"
 
                     />
-                </Link>
+                    <Link href={"/"}>
+                        <Image
+                            aria-hidden
+                            src={avatar}
+                            alt="icon"
+                            width={40}
+
+                        />
+                    </Link>
                 </div>
             </div>
         </header>

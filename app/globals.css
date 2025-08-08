@@ -41,6 +41,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --text-color-tertiary: oklch(56.7% 0.12 233.86);
+  --text-color-tertiary: oklch(56.7% 0.12 233.86);
+
 }
 
 :root {
@@ -112,6 +114,7 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -120,12 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
-@layer utilities {
-  .text-base {
-    font-size: 0.9rem; /* e.g., 18px */
-  }
-}
+
 
 body {
   font-family: 'Public Sans', sans-serif;
+  font-size: 15px;
 }

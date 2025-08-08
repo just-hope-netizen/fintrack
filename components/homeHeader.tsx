@@ -32,7 +32,7 @@ const HomeHeader = () => {
       </section>
       <div className=" flex flex-wrap items-center gap-2">
         <Image src={profilePictures} alt="" width={110} />
-        <span className=" text-[#15272D]/60  text-xs sm:text-base">Ava, Liam, Noah <span className=" ml-1">+12 others</span></span>
+        <span className=" text-[#15272D]/60  text-xs sm:text-[15px]">Ava, Liam, Noah <span className=" ml-1">+12 others</span></span>
 
       </div>
     </>

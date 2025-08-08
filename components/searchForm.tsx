@@ -1,12 +1,10 @@
 'use client'
 import { Search } from "lucide-react"
 import { SidebarInput } from "@/components/ui/sidebar"
-import { ChangeEvent, FormEvent, useState } from "react"
-import { Button } from "./ui/button"
+import { FormEvent, useState } from "react"
 import { data } from "@/lib/utils"
 import { columns, Transaction } from "./columns"
 import { TransactionTable } from "./TransactionTable"
-import { Skeleton } from "./ui/skeleton"
 import { LoadingButton } from "./ui/loadingButton"
 
 export function SearchForm({ ...props }: React.ComponentProps<"form">) {
@@ -17,10 +15,14 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
   const searchHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
-    const matchingQuery: Transaction[] = data.filter(item => item.remark.toLocaleLowerCase().includes(inputValue.toLowerCase()))
-    setFilteredData(matchingQuery)
-    setInputValue('')
-    setIsLoading(false)
+
+    //simulate data fetching
+    setTimeout(()=>{
+      const matchingQuery: Transaction[] = data.filter(item => item.remark.toLocaleLowerCase().includes(inputValue.toLowerCase()))
+      setFilteredData(matchingQuery)
+      setInputValue('')
+      setIsLoading(false)
+    }, 2000)
   }
   return (
     < >
@@ -36,15 +38,13 @@ export function SearchForm({ ...props }: React.ComponentProps<"form">) {
           />
           <Search className="pointer-events-none absolute top-1/2 right-2 size-4 -translate-y-1/2 opacity-50 select-none" />
         </div>
-        {/* <Button  className=" bg-[#386776]">
-        </Button> */}
+       
         <LoadingButton loading={isLoading}>
           Search
 
         </LoadingButton>
 
       </form>
-      {/* <Skeleton className="h-[20px] w-[100px] rounded-full" /> */}
       <TransactionTable columns={columns} data={filteredData} />
     </>
   )
